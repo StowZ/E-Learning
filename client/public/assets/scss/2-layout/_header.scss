@@ -60,8 +60,8 @@
       flex-direction: row;
 
       img {
-        height: 50px;
-        width: 50px;
+        height: 75px;
+        width: 140px;
       }
 
       h3 {
@@ -289,8 +289,8 @@
           align-items: center;
 
           img {
-            height: 40px;
-            width: 40px;
+            height: 75px;
+            width: 140px;
           }
 
           h3 {
@@ -665,7 +665,7 @@
               content: "";
               height: 3px;
               transition: $transition--cubic;
-              background-color: $white;
+              background-color: $black;
             }
 
           }
@@ -805,7 +805,12 @@
 
             &>a {
               padding: 25px 0;
-              color: $white;
+              font-size: medium;
+              font-weight: bold;
+              color: $black;
+              &:active {
+                color: $theme-color--blue;
+              }
             }
           }
         }

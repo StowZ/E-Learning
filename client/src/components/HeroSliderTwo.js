@@ -5,10 +5,13 @@ class HeroSliderOne extends Component {
   render() {
     const params = {
       slidesPerView: 1,
-      loop: true,
+      loop: false,
       speed: 1000,
       watchSlidesVisibility: true,
       effect: "fade",
+      autoplay: {
+        delay: 5000,
+      },
       navigation: {
         nextEl: ".ht-swiper-button-next",
         prevEl: ".ht-swiper-button-prev"
@@ -23,33 +26,22 @@ class HeroSliderOne extends Component {
           <i className="ion-ios-arrow-forward" />
         </div>
       ),
-      autoplay: {
-        delay: 5000
-      }
+      
     };
 
     let data = [
       {
-        bgImg: "crowsel3.png",
+        bgImg: "1.png",
         sliderTitle: "Build Your Dream With Passion",
         sliderSubtitle:
           "Learn, Code and start developing your own beautiful websites at no cost.",
         btnLink: "contact-us"
       },
       {
-        bgImg: "crowsel2.png",
-        sliderTitle: "Build Your Dream With Passion",
-        sliderSubtitle:
-          "Learn, Code and start developing your own beautiful websites at no cost.",
-        btnLink: "contact-us"
+        bgImg: "2.jpg",
+        
       },
-      {
-        bgImg: "crowsel0.png",
-        sliderTitle: "Build Your Dream With Passion",
-        sliderSubtitle:
-          "Learn, Code and start developing your own beautiful websites at no cost.",
-        btnLink: "contact-us"
-      }
+      
     ];
 
     let DataList = data.map((val, i) => {

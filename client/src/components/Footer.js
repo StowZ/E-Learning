@@ -22,7 +22,6 @@ class Footer extends Component {
                                 alt=""
                                 className="sticky-logo img-fluid"
                               />
-                              <h3>KnowHow</h3>
                             </div>
                           </a>
                         </div>
@@ -118,7 +117,7 @@ class Footer extends Component {
           </div>
           <div className="footer-copyright-wrapper">
             <div className="footer-copyright text-center">
-              Copyright © 2019. All right reserved
+              Copyright © 2022. All right reserved
             </div>
           </div>
         </div>

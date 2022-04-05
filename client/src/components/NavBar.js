@@ -52,11 +52,11 @@ class NavBar extends Component {
                             <a href={`${process.env.PUBLIC_URL}/home-two`}>
                               <div className="logoHead">
                                 <img
-                                  src="/assets/img/logo/logonew.png"
+                                  src="/assets/img/logo/LogoBanner.png"
                                   alt=""
                                   className="sticky-logo img-fluid"
+                                  
                                 />
-                                <h3>KnowHow</h3>
                               </div>
                             </a>
 
@@ -98,7 +98,7 @@ class NavBar extends Component {
                                   className="nav-link"
                                 >
                                   <img
-                                    src="https://cdn1.iconfinder.com/data/icons/user-avatars-2/300/04-512.png"
+                                    src="https://cdn2.iconfinder.com/data/icons/ios-7-icons/50/user_male4-512.png"
                                     height="10px"
                                     width="10px"
                                     alt={users.first_name}
@@ -217,12 +217,12 @@ class NavBar extends Component {
       <React.Fragment>
         <li>
           <Link className="nav-link" to="/login/student">
-            LOGIN
+            STUDENT
           </Link>
         </li>
         <li>
           <Link className="nav-link" to="/login/instructor">
-            Teach On Knowhow
+            TEACHER
           </Link>
         </li>
       </React.Fragment>
@@ -242,17 +242,17 @@ class NavBar extends Component {
                     <div className="header-navigation header-navigation--header-default position-relative">
                       <div
                         className="header-navigation__nav position-static"
-                        style={{ width: "100%" }}
+                        style={{ width: "100%"}}
                       >
                         <nav className="main-nav">
                           <a href={`${process.env.PUBLIC_URL}/home-two`}>
                             <div className="logoHead">
                               <img
-                                src="/assets/img/logo/logonew.png"
+                                src="/assets/img/logo/LogoBanner.png"
                                 alt=""
                                 className="sticky-logo img-fluid"
+                                
                               />
-                              <h3>KnowHow</h3>
                             </div>
                           </a>
 

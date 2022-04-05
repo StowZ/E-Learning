@@ -67,13 +67,13 @@ class Login extends Component {
                 <div className="card-body">
                   <div className="logoHead">
                     <img
-                      src="/assets/img/logo/logonew.png"
+                      src="https://cdn2.iconfinder.com/data/icons/ios-7-icons/50/user_male4-512.png"
                       alt=""
                       height="60px"
                       width="60px"
                       className="sticky-logo img-fluid"
                     />
-                    <h3>KnowHow</h3>
+                    <h3>&nbsp;Welcome</h3>
                   </div>
                   <h4 className="mb-3 f-w-400">Login into your account</h4>
 
