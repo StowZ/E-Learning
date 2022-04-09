@@ -37,9 +37,9 @@ class About extends Component {
                   <h1>About Us</h1>
                   <ul className="page-breadcrumb">
                     <li>
-                      <a href="/">Home</a>
+                      {/*<a href="/">Home</a>*/}
                     </li>
-                    <li>About Us</li>
+                    {/*<li>About Us</li>*/}
                   </ul>
                 </div>
               </div>

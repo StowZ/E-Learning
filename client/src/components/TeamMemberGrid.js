@@ -6,59 +6,34 @@ class TeamMemberGrid extends Component {
 
     let data = [
       {
-        profileImage: "team-1.jpg",
-        profileTitle: "Ashwini Soni",
-        profileDesignation: "Team Member 1",
-        profileEmail: "info@example.com",
-        socialLinks: {
-          facebook: "//www.facebook.com",
-          twitter: "//www.twitter.com",
-          linkedin: "//www.linkedin.com",
-          googlePlus: "//plus.google.com"
-        }
+        profileImage: "",
+        profileTitle: "Phone",
+        profileDesignation: "",
+        profileEmail: "+216-77 238 479",
+        
       },
       {
-        profileImage: "team-2.jpg",
-        profileTitle: "Rutva Patel",
-        profileDesignation: "Team Member 2",
-        profileEmail: "info@example.com",
-        socialLinks: {
-          facebook: "//www.facebook.com",
-          twitter: "//www.twitter.com",
-          linkedin: "//www.linkedin.com",
-          googlePlus: "//plus.google.com"
-        }
+        profileImage: "",
+        profileTitle: "Support Email",
+        profileDesignation: "",
+        profileEmail: "contact@gomarket.com.tn",
+        
       },
       {
-        profileImage: "team-3.jpg",
-        profileTitle: "Amandeep Singh",
-        profileDesignation: "Team Member 3",
-        profileEmail: "info@example.com",
-        socialLinks: {
-          facebook: "//www.facebook.com",
-          twitter: "//www.twitter.com",
-          linkedin: "//www.linkedin.com",
-          googlePlus: "//plus.google.com"
-        }
+        profileImage: "",
+        profileTitle: "Location",
+        profileDesignation: "",
+        profileEmail: "GoMarket , Kairouan",
+        
       },
-      {
-        profileImage: "team-4.jpg",
-        profileTitle: "Apurva Savaj",
-        profileDesignation: "Team Member 4",
-        profileEmail: "info@example.com",
-        socialLinks: {
-          facebook: "//www.facebook.com",
-          twitter: "//www.twitter.com",
-          linkedin: "//www.linkedin.com",
-          googlePlus: "//plus.google.com"
-        }
-      }
+      
+      
     ];
 
     let Datalist = data.map((val, i) => {
       return (
         <div
-          className="col-lg-3 col-sm-6 col-12 section-space--bottom--30"
+          className="col section-space--bottom--30"
           key={i}
         >
           <div className="team">
@@ -84,7 +59,7 @@ class TeamMemberGrid extends Component {
               <div className="col-lg-12">
                 <div className="section-title-area text-center">
                   <h2 className="section-title section-space--bottom--50">
-                    Our Team <span className="title-icon" />
+                   {/* Our Team */}<span />
                   </h2>
                 </div>
               </div>

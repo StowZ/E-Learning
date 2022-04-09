@@ -53,6 +53,8 @@ export default class CatEdit extends Component {
       });
   };
 
+
+
   render() {
     // const menuClass = `dropdown-menu${this.state.isOpen ? " show" : ""}`;
     var message = "You selected " + this.state.todos.role;
@@ -63,9 +65,9 @@ export default class CatEdit extends Component {
           <div className="row">
             <div className="col-md-6 mt-5 mx-auto">
               <form onSubmit={this.onSubmit}>
-                {/* <Link to="/" className="btn btn-light">
+                 <Link to="/ShowCategoryList" className="btn btn-light">
                   Go Back
-                </Link> */}
+                </Link> 
                 <br />
                 <br />
                 <h1
@@ -96,7 +98,9 @@ export default class CatEdit extends Component {
                   className="btn btn-lg btn-info btn-block"
                 >
                   Update
-                </button>
+                </button> &nbsp;
+      
+                
               </form>
             </div>
           </div>

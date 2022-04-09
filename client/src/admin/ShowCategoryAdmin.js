@@ -37,17 +37,18 @@ export default class ShowCategory extends Component {
       .delete("http://localhost:5000/category?id=" + id)
       .then(result => {
         // this.forceUpdate()
-        // this.props.history.push("/showcategory/")
+
         toast.success("Deleted successfully");
+        // this.props.history.push("/showenroll/")
       })
       .catch(err => {
         // then print response status
-        toast.error("Category not deleted");
+        toast.error("Course not deleted");
       });
+
     setTimeout(
       function() {
-        //Start the timer
-        window.location.reload(); //After 1 second, set render to true
+        window.location.reload();
       }.bind(this),
       1300
     );
@@ -72,7 +73,7 @@ export default class ShowCategory extends Component {
             >
               Edit
             </a>
-            {/* <button onClick={this.delete.bind(this, props.todo._id)} class="btn btn-danger">Delete</button> */}
+            <button onClick={this.delete.bind(this, props.todo._id)} class="btn btn-danger">Delete</button> 
             {/* <p>{message}</p> */}
           </td>
         </tr>
