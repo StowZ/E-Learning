@@ -9,7 +9,7 @@ import BrandLogoSlider from "./components/BrandLogoSlider";
 import Footer from "./components/Footer";
 import MobileMenu from "./components/MobileMenu";
 
-class HomeTwo extends Component {
+class Home extends Component {
   render() {
     return (
       <div>
@@ -48,4 +48,4 @@ class HomeTwo extends Component {
   }
 }
 
-export default HomeTwo;
+export default Home;

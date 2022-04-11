@@ -35,11 +35,11 @@ class HeroSliderOne extends Component {
         sliderTitle: "Build Your Dream With Passion",
         sliderSubtitle:
           "Learn, Code and start developing your own beautiful websites at no cost.",
-        btnLink: "contact-us"
+        btnLink: "register/student"
       },
       {
         bgImg: "2.jpg",
-        
+        btnLink: "register/student"
       },
       
     ];

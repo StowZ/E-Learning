@@ -20,7 +20,7 @@ import EnrollmentList from "./admin/showEnrollAdmin";
 import Dashboard from "./admin/Dashboard";
 import CreateEnrollAdmin from "./admin/createEnrollAdmin";
 import Forgot from "./auth/Forgot";
-import HomeTwo from "./HomeTwo";
+import Home from "./Home";
 import About from "./pages/About";
 import Services from "./service/Services";
 import ServicesForInstructor from "./service/ServicesByInstructor";
@@ -83,13 +83,13 @@ class Root extends Component {
             <Route
               exact
               path={`${process.env.PUBLIC_URL}/`}
-              component={HomeTwo}
+              component={Home}
             />
 
             <Route
               exact
-              path={`${process.env.PUBLIC_URL}/home-two`}
-              component={HomeTwo}
+              path={`${process.env.PUBLIC_URL}/home`}
+              component={Home}
             />
 
             <Route
@@ -264,7 +264,7 @@ class Root extends Component {
               path={`${process.env.PUBLIC_URL}/add-education`}
               component={AddEducation}
             />
-            <PrivateRoute component={NoMAtch} />
+            <Route component={NoMAtch} />
           </Switch>
         </BrowserRouter>
       </Provider>

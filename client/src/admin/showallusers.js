@@ -22,7 +22,7 @@ const Todo = props => (
         <td>
             {/* <Link to={"users/edit/"+props.todo._id}>Edit</Link> */}
             {/* <button className="button muted-button" className="btn btn-success"><Link to={"users/edit/"+props.todo._id}>Edit</Link></button> */}
-            <a href={"/allusers/edit/"+props.todo._id} className="btn btn-primary btn-info" role="button" aria-pressed="true">Edit</a>
+            <a style={{backgroundColor:"#1A78B8"}} href={"/allusers/edit/"+props.todo._id} className="btn btn-primary btn-info" role="button" aria-pressed="true">Edit</a>
             
         </td>
     </tr>
@@ -84,9 +84,9 @@ export default class UserList extends Component {
                 <NavBar/>           
                
                <div style={{padding:"20px",display:"flex",flexDirection:"row",justifyContent:"space-between"}}>
-               <a href="/users/create" className="btn btn-primary btn-info btn active" role="button" aria-pressed="true">Create User</a> <br/>
+               <a style={{backgroundColor:"#1A78B8"}} href="/users/create" className="btn btn-primary btn-info btn active" role="button" aria-pressed="true">Create User</a> <br/>
                
-                <h1 style={{marginLeft:"-200px", textDecoration:"underline", color:"#F0542D"}}>Manage Users</h1>
+                <h1 style={{marginLeft:"-200px", textDecoration:"underline", color:"#1A78B8"}}>Manage Users</h1>
                 <input type="text" placeholder="Search..." class="form-control input-sm" style={{width:"250px"}} value={this.state.search} onChange={this.updateSearch.bind(this)}/>
                </div>
       

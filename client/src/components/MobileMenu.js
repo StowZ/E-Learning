@@ -21,11 +21,11 @@ class MobileMenu extends Component{
                         <nav className="offcanvas-navigation">
                             <ul>
                             <li className="menu-item-has-children">
-                            <a href={`${process.env.PUBLIC_URL}/home-one`}>Home</a>
-                                <ul className="sub-menu">
+                            <a href={`${process.env.PUBLIC_URL}/home`}>Home</a>
+                               {/* <ul className="sub-menu">
                                     <li><a href={`${process.env.PUBLIC_URL}/home-one`}>Homepage One</a></li>
                                     <li><a href={`${process.env.PUBLIC_URL}/home-two`}>Homepage Two</a></li>
-                                </ul>
+        </ul> */}
                             </li>
                             <li><a href={`${process.env.PUBLIC_URL}/about-us`}>ABOUT</a></li>
                             <li className="menu-item-has-children">

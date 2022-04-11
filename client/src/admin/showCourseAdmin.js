@@ -73,7 +73,7 @@ export default class UserList extends Component {
           <td>
             {/* <Link to={"users/edit/"+props.todo._id}>Edit</Link> */}
             {/* <button className="button muted-button" class="btn btn-success"><Link to={"users/edit/"+props.todo._id}>Edit</Link></button> */}
-            <a
+            <a style={{backgroundColor:"#1A78B8"}}
               href={"/ShowCourseList/edit/" + props.todo._id}
               class="btn btn-primary btn-info"
               role="button"

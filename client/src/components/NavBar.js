@@ -49,13 +49,13 @@ class NavBar extends Component {
                           style={{ width: "100%" }}
                         >
                           <nav className="main-nav">
-                            <a href={`${process.env.PUBLIC_URL}/home-two`}>
+                            <a href={`${process.env.PUBLIC_URL}/home`}>
                               <div className="logoHead">
                                 <img
                                   src="/assets/img/logo/LogoBanner.png"
                                   alt=""
                                   className="sticky-logo img-fluid"
-                                  
+
                                 />
                               </div>
                             </a>
@@ -190,6 +190,7 @@ class NavBar extends Component {
           <li>
             <a href={`${process.env.PUBLIC_URL}/finaldashboard`}>PROFILE</a>{" "}
           </li>
+
           {/* <li>
               <a href={`${process.env.PUBLIC_URL}/services/`}>
                 SERVICE
@@ -242,29 +243,34 @@ class NavBar extends Component {
                     <div className="header-navigation header-navigation--header-default position-relative">
                       <div
                         className="header-navigation__nav position-static"
-                        style={{ width: "100%"}}
+                        style={{ width: "100%" }}
                       >
                         <nav className="main-nav">
-                          <a href={`${process.env.PUBLIC_URL}/home-two`}>
+                          <a href={`${process.env.PUBLIC_URL}/home`}>
                             <div className="logoHead">
                               <img
                                 src="/assets/img/logo/LogoBanner.png"
                                 alt=""
                                 className="sticky-logo img-fluid"
-                                
+
                               />
                             </div>
                           </a>
 
                           <ul id="main-nav-ul">
                             <li>
-                              <a href={`${process.env.PUBLIC_URL}/home-two`}>
+                              <a href={`${process.env.PUBLIC_URL}/home`}>
                                 HOME
                               </a>
                             </li>
                             <li>
                               <a href={`${process.env.PUBLIC_URL}/about-us`}>
                                 ABOUT
+                              </a>
+                            </li>
+                            <li>
+                              <a href={`${process.env.PUBLIC_URL}/contact-us`}>
+                                CONTACT US
                               </a>
                             </li>
 
@@ -291,17 +297,17 @@ class NavBar extends Component {
                             }}
                           >
                             <li className="has-children has-children--multilevel-submenu">
-                              <a href={`${process.env.PUBLIC_URL}/home-two`}>
+                              <a href={`${process.env.PUBLIC_URL}/home`}>
                                 HOME
                               </a>
                               <ul className="submenu">
-                                <li>
+                                {/*<li>
                                   <a
                                     href={`${process.env.PUBLIC_URL}/home-two`}
                                   >
                                     Homepage Two
                                   </a>
-                                </li>
+                          </li>*/}
                               </ul>
                             </li>
                             <li>
@@ -309,12 +315,12 @@ class NavBar extends Component {
                                 ABOUT
                               </a>
                             </li>
-                            <li>
+                            {/*<li>
                               {" "}
                               <a herf=" http://localhost:5000/hostname/:id">
                                 image
                               </a>
-                            </li>
+                        </li>*/}
 
                             {isAuthenticated ? authLinks : guestLinks}
                           </ul>

@@ -101,7 +101,7 @@ export default class EnrollList extends Component {
             justifyContent: "space-between"
           }}
         >
-          <a
+          <a style={{backgroundColor:"#1A78B8"}}
             href="/createEnrollAdmin"
             className="btn btn-primary btn-info btn active"
             role="button"
@@ -114,7 +114,7 @@ export default class EnrollList extends Component {
             style={{
               marginLeft: "-200px",
               textDecoration: "underline",
-              color: "#F0542D"
+              color: "#1A78B8"
             }}
           >
             Enrollment List

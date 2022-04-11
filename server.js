@@ -8,6 +8,7 @@ const category = require("./routes/api/category");
 const enroll = require("./routes/api/enrollRoute");
 const role = require("./routes/api/role");
 const lecture = require("./routes/api/lecture");
+const contact = require("./routes/api/contact");
 const fileUpload = require('express-fileupload');
 var multer = require('multer')
 var cors = require('cors');
@@ -46,6 +47,7 @@ app.use(category);
 app.use(lecture);
 app.use(enroll);
 app.use(role);
+app.use(contact)
 app.use("/api/profile", profile);
 
 const port = process.env.PORT || 5000;

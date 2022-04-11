@@ -133,7 +133,7 @@ export default class UserEdit extends Component {
                 </div>
 
                 <br />
-                <button type="submit" class="btn btn-dark">Update</button> &nbsp;
+                <button style={{backgroundColor:"#1A78B8"}} type="submit" class="btn btn-primary">Update</button> &nbsp;
                 <button onClick={this.delete.bind(this, this.state.todos._id)} class="btn btn-danger">Delete</button>
 
 

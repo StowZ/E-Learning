@@ -65,9 +65,9 @@ export default class CreateCategory extends Component {
     <div className="row">
         <div className="col-md-6 mt-5 mx-auto">
             <form onSubmit={this.onSubmit} >
-                {/* <Link to="/" className="btn btn-light">Go Back</Link>
+                <Link to="/ShowCategoryList" className="btn btn-light">Go Back</Link>
                 <br/>
-                <br/> */}
+                <br/>
                 <h1 className="h3 mb-3 font-weight-bold" style={{textDecoration:"underline"}}>Create Category</h1>
                 <div className="form-group">
                     <label>New Category</label>
@@ -81,7 +81,7 @@ export default class CreateCategory extends Component {
                 </div>
                 
                 <br/>
-                <button type="submit" value="Add Category" className="btn btn-lg btn-info btn-block">
+                <button style={{backgroundColor:"#1A78B8"}} type="submit" value="Add Category" className="btn btn-lg btn-info btn-block">
                     Add Course
                 </button>
             </form>

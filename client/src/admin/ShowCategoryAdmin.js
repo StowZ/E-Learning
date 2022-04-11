@@ -65,7 +65,7 @@ export default class ShowCategory extends Component {
           <td>{props.todo.categoryName}</td>
 
           <td>
-            <a
+            <a style={{backgroundColor:"#1A78B8"}}
               href={"/ShowCategoryList/edit/" + props.todo._id}
               class="btn btn-primary btn-info"
               role="button"

@@ -15,7 +15,7 @@ class Footer extends Component {
                       {/* footer intro wrapper */}
                       <div className="footer-intro-wrapper">
                         <div className="footer-logo">
-                          <a href={`${process.env.PUBLIC_URL}/home-two`}>
+                          <a href={`${process.env.PUBLIC_URL}/home`}>
                             <div className="logoHead">
                               <img
                                 src="/assets/img/logo/logonew.png"
@@ -26,9 +26,8 @@ class Footer extends Component {
                           </a>
                         </div>
                         <div className="footer-desc">
-                          Lorem ipsum dolor sit amet consect adipisici elit, sed
-                          do eiusmod tempor incididuk ut labore et dolore magna
-                          aliqua Ut enim
+                          GOMARKET is a Marketing and Communication Strategies Company based in Tunisia.
+                          It provides companies and NGOs with coaching and consulting services and the opportunity to network and access new markets.
                         </div>
                       </div>
                     </div>
@@ -41,18 +40,10 @@ class Footer extends Component {
                             <a href={`${process.env.PUBLIC_URL}/`}>Home</a>
                           </li>
                           <li>
-                            <a href={`${process.env.PUBLIC_URL}/`}>
-                              Company News
-                            </a>
+                            <a href={`${process.env.PUBLIC_URL}/about-us`}>About Us</a>
                           </li>
                           <li>
-                            <a href={`${process.env.PUBLIC_URL}/`}>Projects</a>
-                          </li>
-                          <li>
-                            <a href={`${process.env.PUBLIC_URL}/`}>Careers</a>
-                          </li>
-                          <li>
-                            <a href={`${process.env.PUBLIC_URL}/`}>
+                            <a href={`${process.env.PUBLIC_URL}/contact-us`}>
                               Contact Us
                             </a>
                           </li>
@@ -94,17 +85,14 @@ class Footer extends Component {
                         <h4 className="footer-widget__title">CONTACT US</h4>
                         <div className="footer-widget__content">
                           <p className="address">
-                            Your address goes here, street Crossroad123.
+                          GoMarket , Kairouan , Tunisie.
                           </p>
                           <ul className="contact-details">
                             <li>
-                              <span>P:</span>99 55 66 88 526
+                              <span>P:</span>+216 77 238 479
                             </li>
                             <li>
-                              <span>F:</span>55 44 77 62
-                            </li>
-                            <li>
-                              <span>E:</span>cons@email.com
+                              <span>E:</span>contact@gomarket.com.tn
                             </li>
                           </ul>
                         </div>
