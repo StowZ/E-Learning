@@ -264,7 +264,7 @@ class Root extends Component {
               path={`${process.env.PUBLIC_URL}/add-education`}
               component={AddEducation}
             />
-            <Route component={NoMAtch} />
+            <PrivateRoute component={NoMAtch} />
           </Switch>
         </BrowserRouter>
       </Provider>

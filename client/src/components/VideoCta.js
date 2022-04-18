@@ -26,9 +26,7 @@ class VideoCta extends Component {
                     Best E-learning Portal
                   </h3>
                   <p className="video-cta-content__text">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim
+                  GOMARKET is a Marketing and Communication Strategies Company based in Tunisia. It provides companies and NGOs with coaching and consulting services and the opportunity to network and access new markets.
                   </p>
                   <a
                     href={`${process.env.PUBLIC_URL}/contact-us`}
@@ -41,8 +39,8 @@ class VideoCta extends Component {
               <div className="col-lg-5 offset-lg-1 col-md-6">
                 <div className="cta-video-image">
                   <img
-                    src="assets/img/slider/sphere.png"
-                    height="360px"
+                    src="assets/img/logo/logonew.png"
+                    height="250px"
                     width="360px"
                     alt="techsphere"
                   />

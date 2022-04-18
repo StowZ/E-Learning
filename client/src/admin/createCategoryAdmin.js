@@ -68,7 +68,7 @@ export default class CreateCategory extends Component {
                 <Link to="/ShowCategoryList" className="btn btn-light">Go Back</Link>
                 <br/>
                 <br/>
-                <h1 className="h3 mb-3 font-weight-bold" style={{textDecoration:"underline"}}>Create Category</h1>
+                <h1 className="h3 mb-3 font-weight-bold" style={{textDecoration:"underline", color: "#1A78B8"}}>Create Category</h1>
                 <div className="form-group">
                     <label>New Category</label>
                     <input type="text"

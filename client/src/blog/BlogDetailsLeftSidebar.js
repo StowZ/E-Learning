@@ -53,6 +53,12 @@ class BlogDetailsLeftSidebar extends Component {
           // then print response status
           toast.error("Course not added");
         });
+        setTimeout(
+          function() {
+            window.location.reload();
+          }.bind(this),
+          1300
+        );
     } else {
       console.log(this.state.buttonclass);
       toast.error("Course already added");

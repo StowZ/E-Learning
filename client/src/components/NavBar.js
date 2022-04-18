@@ -144,6 +144,9 @@ class NavBar extends Component {
               </li>
             </ul>
           </li>
+          <li>
+            <a href={`${process.env.PUBLIC_URL}/finaldashboard`}>PROFILE</a>{" "}
+          </li>
           <li className="inactive">
             <a
               href=""

@@ -51,7 +51,13 @@ export default class EditCourse extends Component{
           }
         
         //   toggleOpen = () => this.setState({ isOpen: !this.state.isOpen });
-       
+        delete(id) {
+          console.log(id);
+          axios.delete('http://localhost:5000/course?id=' + this.props.match.params.id)
+            .then((result) => {
+              this.props.history.push("/ShowCourseList/")
+            });
+        }
     
         handleChange(e) {
           var whoIsChecked = {...this.state.whoIsChecked}
@@ -78,13 +84,16 @@ export default class EditCourse extends Component{
             <div class="container">
           <div class="panel panel-default">
             <div class="panel-heading">
-              <h3 class="panel-title">
+              <br></br>
+              <br></br>
+              <h3 class="panel-title" style={{textDecoration:"underline", color:"#1A78B8"}}>
                 Edit Course
               </h3>
             </div>
+            <br></br>
             <div class="panel-body">
              
-              {/* <a href={"/showcourses/"} class="btn btn-primary btn active" role="button" aria-pressed="true">Back</a> */}
+              <a href={"/ShowCourseList"} class="btn btn-light" role="button" aria-pressed="true">Back</a> 
               <form onSubmit={this.onSubmit}>
                 <div class="form-group">
                   <label for="First Name">Course Title:</label>
@@ -98,8 +107,8 @@ export default class EditCourse extends Component{
                             <br />
                 
                 <button type="submit" class="btn btn-dark">Update</button> &nbsp;
-                {/* <button onClick={this.delete.bind(this, this.state.todos._id)} class="btn btn-danger">Delete</button> */}
-                {/* <p>{message}</p> */}
+                <button onClick={this.delete.bind(this, this.state.todos._id)} class="btn btn-danger">Delete</button> 
+                {/* <p>{message}</p> */} 
               
             
                </form>

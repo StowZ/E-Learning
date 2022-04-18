@@ -1,80 +1,30 @@
-import React, {Component} from 'react';
 import NavBar from '../components/NavBar';
 import Footer from '../components/Footer';
 import MobileMenu from '../components/MobileMenu';
-import axios from 'axios';
+import React, { useRef } from 'react';
+import emailjs from '@emailjs/browser';
+import { ToastContainer, toast } from "react-toastify";
 
-class Contact extends Component{
 
-    constructor(props) {
-        super(props);
-
-        /** Setting the initial state of the component by assigned an object to this.state **/
-        this.state = {
-            contactName: '',
-            contactEmail: '',
-            contactMessage: '',
-            
-        };
-
-        /** Ensure to bind our methods to this by adding them here **/
-        this.onChangeContactName = this.onChangeContactName.bind(this);
-        this.onChangeContactEmail = this.onChangeContactEmail.bind(this);
-        this.onChangeContactMessage = this.onChangeContactMessage.bind(this);
-        
-        this.onSubmit = this.onSubmit.bind(this);
-    }
-
-    onChangeContactName(e) {
-        this.setState({
-            contactName: e.target.value
-        });
-    }
-
-    onChangeContactEmail(e) {
-        this.setState({
-            contactEmail: e.target.value
-        });
-    }
-
-    onChangeContactMessage(e) {
-        this.setState({
-            contactMessage: e.target.value
-        });
-    }
-
-    onSubmit(e) {
-        e.preventDefault(); //ensure that the default HTML form submit behaviour is prevented
-
-        console.log(`Form submitted:`);
-        console.log(`Todo contact: ${this.state.contactName}`);
-        console.log(`Todo contact: ${this.state.contactEmail}`);
-        console.log(`Todo contact: ${this.state.contactMessage}`);
-       
-        const newTodo = {
-            contactName:this.state.contactName,
-            contactEmail:this.state.contactEmail,
-            contactMessage:this.state.contactMessage
-          
-            // todo_completed: this.state.todo_completed
-        };
-
-        axios.post('http://localhost:5000/contact/add/', newTodo)
-        .then((result) => {
-            this.props.history.push("/contact-us")
+export const Contact = () => {
+    const form = useRef();
+    const sendEmail = (e) => {
+        e.preventDefault();
+    
+        emailjs.sendForm('service_9bs89fa', 'template_8evmzg9', form.current, 'RcDz9-SVtyzM4aeHM')
+          .then((result) => {
+            { toast.success("Message sent successfully !") ; setTimeout(
+                function() {
+                    window.location.reload();
+                }.bind(this),
+                2500
+              )}
+          }, (error) => {
+            toast.error("Failed to sent.");
           });
+      };
 
-        // Reset the Values.
-        this.setState({
-            
-            contactName: '',
-            contactEmail: '',
-            contactMessage: '',
-            todo_completed: false
-        })
-    }
-
-    render(){
+ 
         return(
             <div>
                 {/* Navigation bar */}
@@ -134,16 +84,17 @@ class Contact extends Component{
                         <div className="col-lg-8 col-12">
                         <div className="contact-form">
                             <h3>Leave Your Message</h3>
-                            <form onSubmit={this.onSubmit}>
+                            <form  ref={form} onSubmit={sendEmail}>
                             <div className="row row-10">
-                                <div className="col-md-6 col-12 section-space--bottom--20"><input name="con_name" type="text" placeholder="Your Name" required value={this.state.contactName} onChange={this.onChangeContactName}/></div>
-                                <div className="col-md-6 col-12 section-space--bottom--20"><input name="con_email" type="email" placeholder="Your Email" required value={this.state.contactEmail} onChange={this.onChangeContactEmail}/></div>
-                                <div className="col-12"><textarea name="con_message" placeholder="Your Message" defaultValue={""} required value={this.state.contactMessage} onChange={this.onChangeContactMessage}/></div>
+                                <div className="col-md-6 col-12 section-space--bottom--20"><input name="con_name" type="text" placeholder="Your Name" required /></div>
+                                <div className="col-md-6 col-12 section-space--bottom--20"><input name="con_email" type="email" placeholder="Your Email" required /></div>
+                                <div className="col-12"><textarea name="con_message" placeholder="Your Message" defaultValue={""} required /></div>
                                 <div className="col-12"><button type="submit">Send Message</button></div>
                             </div>
                             </form>
                         </div>
                         </div>
+                        <ToastContainer />
                     </div>
                     </div>
                 </div>
@@ -159,7 +110,7 @@ class Contact extends Component{
 
             </div>
         )
-    }
+    
 }
 
 

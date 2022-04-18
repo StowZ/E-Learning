@@ -104,7 +104,7 @@ class ServiceGridSlider extends Component {
               <div className="col-lg-12">
                 <div className="section-title-area text-center">
                   <h2 className="section-title mb-0">
-                    Latest Tutorials <span className="title-icon" />
+                    Latest Tutorials 
                   </h2>
                 </div>
               </div>

@@ -7,6 +7,7 @@ import PropTypes from "prop-types";
 import { withRouter } from "react-router-dom";
 import { connect } from "react-redux";
 import { registerUser } from "../actions/authActions";
+import { ToastContainer, toast } from "react-toastify";
 
 class Register extends Component {
   constructor() {
@@ -39,16 +40,21 @@ class Register extends Component {
       password2: this.state.password2,
       role:  this.props.match.params.role
     };
-
+    
     // console.log(newUser);
 
     axios
       .post("http://localhost:5000/users/register", newUser)
-      .then(res => console.log(res.data))
+      .then(result => { toast.success("Register was successfully !") ; setTimeout(
+        function() {
+          this.props.history.push("/login/"+this.props.match.params.role);
+        }.bind(this),
+        2500
+      )})
+      
       .catch(err => this.setState({ errors: err.response.data }));
-      this.props.history.push("/login/"+this.props.match.params.role)
-    //call registerUser action and pass user data in argument
-   // this.props.registerUser(newUser, this.props.history);
+    
+    
   }
 
   componentWillReceiveProps(nextProps) {
@@ -230,7 +236,7 @@ class Register extends Component {
           </div>
         </div>
       </div>
-    
+      <ToastContainer />
       </div>
     );
   }

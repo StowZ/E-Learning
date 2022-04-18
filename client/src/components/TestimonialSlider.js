@@ -21,22 +21,29 @@ class TestimonialSlider extends Component {
     let data = [
       {
         testimonialImage: "1.jpg",
-        testimonialName: "Apurva Savaj",
-        testimonialDesignation: "Founder",
+        testimonialName: "Hayfa Ben Fraj",
+        testimonialDesignation: "Founder & Manager",
         testimonialText:
           "Lorem ipsum dolor sit amet, consectetur adipisi elit sed do eiusmod tempor incididu ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco"
       },
       {
         testimonialImage: "3.jpg",
-        testimonialName: "Aman Singh",
-        testimonialDesignation: "Engineer",
+        testimonialName: "Ghofrane Ben Fraj",
+        testimonialDesignation: "Community Manager",
         testimonialText:
           "Ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco Lorem ipsum dolor sit amet."
       },
       {
         testimonialImage: "2.jpg",
-        testimonialName: "Aananya Pandey",
-        testimonialDesignation: "CEO",
+        testimonialName: "Ines Mtiraoui",
+        testimonialDesignation: "Administrative and Financial affairs",
+        testimonialText:
+          "consectetur adipisi elit sed do eiusmod tempor incididu ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco"
+      },
+      {
+        testimonialImage: "2.jpg",
+        testimonialName: "Marwa Khlif",
+        testimonialDesignation: "Organization and Management",
         testimonialText:
           "consectetur adipisi elit sed do eiusmod tempor incididu ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco"
       }

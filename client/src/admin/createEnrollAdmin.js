@@ -4,7 +4,7 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 
 const ShowUser = props => (
-  <option selected="selected" key={props.todo.email} value={props.todo.email}>
+  <option key={props.todo.email} value={props.todo.email}>
     {props.todo.email}
   </option>
 );
@@ -115,14 +115,14 @@ export default class CreateEnroll extends Component {
           <div className="row">
             <div className="col-md-6 mt-5 mx-auto">
               <form onSubmit={this.onSubmit}>
-                {/* <Link to="/" className="btn btn-light">Go Back</Link>
+                <Link to="/EnrollmentList" className="btn btn-light">Go Back</Link>
                             <br/>
-                            <br/> */}
+                            <br/> 
                 <h1
                   className="h3 mb-3 font-weight-bold"
-                  style={{ textDecoration: "underline" }}
+                  style={{textDecoration:"underline", color:"#1A78B8"}}
                 >
-                  Create New User
+                  Create New User Enrollement
                 </h1>
                 <br />
 
@@ -141,10 +141,10 @@ export default class CreateEnroll extends Component {
                     id="ada"
                     onChange={this.onChangeStudent}
                     value={this.state.student}
-                  >
+                  ><option value="none" selected hidden>Select an Option</option>
                     {this.UserList()}
-                    {/* <option value="Mobile Development">Android Development</option> */}
                   </select>
+                  <p>{message2}</p>
                 </div>
 
                 <div>
@@ -165,13 +165,14 @@ export default class CreateEnroll extends Component {
                     onChange={this.onChangeCourse}
                     value={this.state.course}
                     defaultValue={this.state.course}
-                  >
+                  ><option value="none" selected hidden>Select an Option</option>
                     {this.CourseList()}
                   </select>
+                  <p>{message}</p>
                 </div>
 
                 <br />
-                <button
+                <button style={{backgroundColor:"#1A78B8"}}
                   type="submit"
                   value="Add User"
                   className="btn btn-lg btn-info btn-block"

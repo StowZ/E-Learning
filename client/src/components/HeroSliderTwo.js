@@ -5,13 +5,11 @@ class HeroSliderOne extends Component {
   render() {
     const params = {
       slidesPerView: 1,
-      loop: false,
+      loop: true,
       speed: 1000,
       watchSlidesVisibility: true,
       effect: "fade",
-      autoplay: {
-        delay: 5000,
-      },
+      
       navigation: {
         nextEl: ".ht-swiper-button-next",
         prevEl: ".ht-swiper-button-prev"
@@ -34,7 +32,7 @@ class HeroSliderOne extends Component {
         bgImg: "1.png",
         sliderTitle: "Build Your Dream With Passion",
         sliderSubtitle:
-          "Learn, Code and start developing your own beautiful websites at no cost.",
+          "Start your learning journey now !",
         btnLink: "register/student"
       },
       {

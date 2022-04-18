@@ -91,7 +91,7 @@ class ServiceTabExample extends Component {
               <div className="col-lg-12">
                 <div className="section-title-area text-center">
                   <h2 className="section-title section-space--bottom--50">
-                    Most Viewed Courses <span className="title-icon" />
+                    Courses 
                   </h2>
                 </div>
               </div>

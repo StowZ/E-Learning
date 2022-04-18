@@ -93,7 +93,7 @@ export default class CatEdit extends Component {
                 </div>
 
                 <br />
-                <button
+                <button style={{backgroundColor:"#1A78B8"}}
                   type="submit"
                   className="btn btn-lg btn-info btn-block"
                 >

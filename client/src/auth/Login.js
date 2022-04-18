@@ -57,7 +57,9 @@ class Login extends Component {
     const { errors } = this.state;
 
     const GoogleSuccess = (response) => {
-      console.log(response);
+      const email = response.profileObj.email;
+      const token = response.tokenId;
+      console.log('Failed to login with google error : ' + email , token);
     }
 
     const GoogleFailure = (response) => {
@@ -69,7 +71,7 @@ class Login extends Component {
     }
 
     const errorFacebook = (response) => {
-      console.log(response);
+      console.log('Failed to login with google error : ' + response);
     }
 
     return (
