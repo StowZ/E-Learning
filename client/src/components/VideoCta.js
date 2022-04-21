@@ -40,8 +40,8 @@ class VideoCta extends Component {
                 <div className="cta-video-image">
                   <img
                     src="assets/img/logo/logonew.png"
-                    height="250px"
-                    width="360px"
+                    height="200px"
+                    width="350px"
                     alt="techsphere"
                   />
                 </div>

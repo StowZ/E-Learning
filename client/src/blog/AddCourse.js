@@ -16,12 +16,14 @@ export default class AddCourse extends Component {
     this.state = {
       courseName: "",
       courseDescription: "",
+      imageLink: "",
       instructor: this.props.match.params.id,
       category: "",
       todos: []
     };
     this.onChangeCourseName = this.onChangeCourseName.bind(this);
     this.onChangeDescription = this.onChangeDescription.bind(this);
+    this.onChangeImageLink = this.onChangeImageLink.bind(this);
     this.onChangeCategory = this.onChangeCategory.bind(this);
     this.onSubmit = this.onSubmit.bind(this);
   }
@@ -60,25 +62,34 @@ export default class AddCourse extends Component {
     });
   }
 
+  onChangeImageLink(e) {
+    this.setState({
+      imageLink: e.target.value
+    });
+  }
+
   onChangeCategory(e) {
     this.setState({
       category: e.target.value
     });
   }
+
   onSubmit(e) {
     e.preventDefault(); //ensure that the default HTML form submit behaviour is prevented
 
     console.log(`Form submitted:`);
     console.log(`Todo name: ${this.state.courseName}`);
     console.log(`Todo description: ${this.state.courseDescription}`);
+    console.log(`Todo image: ${this.state.imageLink}`);
     console.log(`Todo instructor: ${this.state.instructor}`);
     console.log(`Todo category: ${this.state.category}`);
 
     const newTodo = {
       courseName: this.state.courseName,
       courseDescription: this.state.courseDescription,
+      imageLink: this.state.imageLink,
       instructor: this.props.match.params.id,
-      category: this.state.category
+      category: this.state.category,
       // todo_completed: this.state.todo_completed
     };
     axios
@@ -141,6 +152,22 @@ export default class AddCourse extends Component {
                   </select>
                 </div>
                 <p>{message}</p>
+                <br />
+                
+               
+                 
+                 
+                <div className="form-group">
+                  <label>Add Image URL </label>
+                  <input
+                    type="text"
+                    placeholder="ex: https://..."
+                    className="form-control"
+                    value={this.state.imageLink}
+                    onChange={this.onChangeImageLink}
+                  />
+                </div>
+
                 <br />
                 <button
                   type="submit"

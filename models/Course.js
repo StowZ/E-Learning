@@ -11,6 +11,10 @@ const CourseSchema = new Schema(
       type: String,
       required: true
     },
+    imageLink: {
+      type: String,
+      required: true
+  },
     instructor: { type: Schema.Types.ObjectId, ref: "User" },
     category: { type: Schema.Types.String, ref: "Category" }
   },

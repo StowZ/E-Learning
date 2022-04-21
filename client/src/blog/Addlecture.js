@@ -187,13 +187,13 @@ export default class Upload extends Component {
                 <div class="form-group files">
                   <div className="form-group">
                     <label>Course Name </label>
-                    <select
+                    <select required
                       className="form-control"
                       name="course"
                       id="ada"
                       onChange={this.onChangeCourse}
                       value={this.state.course}
-                    >
+                    ><option value="none" selected hidden>Select an Option</option>
                       {this.CourseList()}
                     </select>
                     <p>{message2}</p>
