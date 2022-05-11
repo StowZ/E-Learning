@@ -6,6 +6,8 @@ import NavBar from '../components/NavBar';
 import PropTypes from "prop-types";
 import { withRouter } from "react-router-dom";
 import { connect } from "react-redux";
+import GoogleLogin from 'react-google-login';
+import FacebookLogin from 'react-facebook-login/dist/facebook-login-render-props'
 import { registerUser } from "../actions/authActions";
 import { ToastContainer, toast } from "react-toastify";
 
@@ -45,7 +47,7 @@ class Register extends Component {
 
     axios
       .post("http://localhost:5000/users/register", newUser)
-      .then(result => { toast.success("Register was successfully !") ; setTimeout(
+      .then(result => { toast.success("Register was successfull !") ; setTimeout(
         function() {
           this.props.history.push("/login/"+this.props.match.params.role);
         }.bind(this),
@@ -57,6 +59,7 @@ class Register extends Component {
     
   }
 
+
   componentWillReceiveProps(nextProps) {
     if (nextProps.errors) {
       this.setState({ errors: nextProps.errors });
@@ -65,6 +68,69 @@ class Register extends Component {
 
   render() {
     const { errors } = this.state;
+
+    const GoogleSuccess = ({ profileObj }) => {
+      if (profileObj.givenName == undefined){
+        profileObj.givenName = 'None';
+      }
+      if (profileObj.familyName == undefined){
+        profileObj.familyName = 'None';
+      }
+
+      const newUser = {
+        first_name: profileObj.givenName,
+        last_name: profileObj.familyName,
+        email: profileObj.email,
+        password: profileObj.googleId,
+        password2: profileObj.googleId,
+        role:  this.props.match.params.role
+      };
+      
+      // console.log(newUser);
+  
+      axios
+        .post("http://localhost:5000/users/register", newUser)
+        .then(result => { toast.success("Register was successfull !") ; setTimeout(
+          function() {
+            this.props.history.push("/login/"+this.props.match.params.role);
+          }.bind(this),
+          2500
+        )})
+        
+        .catch(err => this.setState({ errors: err.response.data }));
+    }
+
+    const GoogleFailure = (response) => {
+      console.log('Failed to login : ' + response);
+    }
+
+    const responseFacebook = (response) => {
+      const newUser = {
+        first_name: response.first_name,
+        last_name: response.last_name,
+        email: response.email,
+        password: response.id,
+        password2: response.id,
+        role:  this.props.match.params.role
+      };
+      
+      // console.log(newUser);
+  
+      axios
+        .post("http://localhost:5000/users/register", newUser)
+        .then(result => { toast.success("Register was successfull !") ; setTimeout(
+          function() {
+            this.props.history.push("/login/"+this.props.match.params.role);
+          }.bind(this),
+          2500
+        )})
+        
+        .catch(err => this.setState({ errors: err.response.data }));
+    }
+
+    const errorFacebook = (response) => {
+      console.log('Failed to login : ' + response);
+    }
 
     return (
       <div>
@@ -83,7 +149,7 @@ class Register extends Component {
                       width="60px"
                       className="sticky-logo img-fluid"
                     />
-                    <h3>&nbsp;Welcome</h3>
+                    <h3>&nbsp;Welcome </h3> <h3 style={{color : 'orange', textTransform: 'capitalize' }}>&nbsp;{ this.props.match.params.role }</h3>
                   </div>
                   <h4 className="mb-3 f-w-400">Sign up into your account</h4>
                   <form noValidate onSubmit={this.onSubmit}>
@@ -191,6 +257,32 @@ class Register extends Component {
                         </div>
                       )}
                     </div>
+
+                    <FacebookLogin
+                        appId="3080894288827797"
+                        autoLoad={false}
+                        fields="first_name,last_name,email"
+                        callback={responseFacebook}
+                        onFailure={errorFacebook}
+                        render={renderProps => (
+                          <button onClick={renderProps.onClick} className="btn btn-facebook mb-2 mr-2"><i className="fab fa-facebook-f" />
+                            facebook</button>
+                        )}
+                      />
+
+                      <GoogleLogin
+                        clientId="841274798809-99te9q7h76uesj6ptot3inqek0japu4i.apps.googleusercontent.com"
+                        buttonText="Google"
+                        onSuccess={GoogleSuccess}
+                        onFailure={GoogleFailure}
+                        cookiePolicy={'single_host_origin'}
+                        render={renderProps => (
+                          <button onClick={renderProps.onClick} className="btn btn-googleplus mb-2 mr-2">
+                            <i className="fab fa-google" />
+                            Google
+                          </button>
+                        )}
+                      />
                     {/* <div className="saprator">
                       <span>OR</span>
                     </div> */}

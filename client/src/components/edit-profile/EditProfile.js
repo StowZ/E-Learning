@@ -289,7 +289,7 @@ class CreateProfile extends Component {
                   <span className="text-muted">Optional</span>
                 </div>
                 {socialInputs}
-                <input
+                <input style = {{backgroundColor: '#1273B5'}}
                   type="submit"
                   value="Submit"
                   className="btn btn-info btn-block mt-4"

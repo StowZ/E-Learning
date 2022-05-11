@@ -44,8 +44,15 @@ class Services extends Component {
                     `${val.course._id}`
                   }
                 >
-                  <img
-                    src={val.course.courseImage}
+                  <img style={{
+                    width: 300,
+                    height: 150,
+                    borderWidth: 5,
+
+                    // Set border color.
+                    borderColor: '#F44336',
+                  }}
+                    src={val.course.imageLink}
                     className="img-fluid"
                     alt="Service Grid"
                   />

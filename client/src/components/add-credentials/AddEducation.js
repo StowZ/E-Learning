@@ -136,7 +136,7 @@ class AddEducation extends Component {
                   error={errors.description}
                   info="Tell us about the program that you were in"
                 />
-                <input
+                <input style = {{backgroundColor: '#1273B5'}}
                   type="submit"
                   value="Submit"
                   className="btn btn-info btn-block mt-4"

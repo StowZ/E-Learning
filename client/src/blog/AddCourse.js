@@ -169,7 +169,7 @@ export default class AddCourse extends Component {
                 </div>
 
                 <br />
-                <button
+                <button style = {{backgroundColor: "#F3990C", borderColor: "orange" }}
                   type="submit"
                   value="add course"
                   className="btn btn-lg btn-primary btn-block"

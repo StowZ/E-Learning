@@ -146,7 +146,7 @@ class CreateProfile extends Component {
               <small className="d-block pb-3">* = required fields</small>
               <form onSubmit={this.onSubmit}>
                 <TextFieldGroup
-                  placeholder="* Profile Handle"
+                  placeholder="* Username"
                   name="handle"
                   value={this.state.handle}
                   onChange={this.onChange}
@@ -227,7 +227,7 @@ class CreateProfile extends Component {
                   <span className="text-muted">Optional</span>
                 </div>
                 {socialInputs}
-                <input
+                <input style = {{backgroundColor: '#1273B5'}}
                   type="submit"
                   value="Submit"
                   className="btn btn-info btn-block mt-4"

@@ -88,6 +88,7 @@ router.get("/coursebyinstructor", (req, res) => {
     });
 });
 
+
 router.put("/course/", (req, res) => {
   //var decoded = jwt.verify(req.headers['authorization'], process.env.SECRET_KEY)
 

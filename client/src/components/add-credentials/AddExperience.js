@@ -136,7 +136,7 @@ class AddExperience extends Component {
                   error={errors.description}
                   info="Tell us about the the position"
                 />
-                <input
+                <input style = {{backgroundColor: '#1273B5'}}
                   type="submit"
                   value="Submit"
                   className="btn btn-info btn-block mt-4"

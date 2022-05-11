@@ -56,10 +56,14 @@ class Login extends Component {
   render() {
     const { errors } = this.state;
 
-    const GoogleSuccess = (response) => {
-      const email = response.profileObj.email;
-      const token = response.tokenId;
-      console.log('Failed to login with google error : ' + email , token);
+    const GoogleSuccess = ({ profileObj }) => {
+      const newUser = {
+        email: profileObj.email,
+        password: profileObj.googleId
+      };
+  
+      this.props.loginUser(newUser);
+      
     }
 
     const GoogleFailure = (response) => {
@@ -67,11 +71,16 @@ class Login extends Component {
     }
 
     const responseFacebook = (response) => {
-      console.log(response);
+      const newUser = {
+        email: response.email,
+        password: response.id
+      };
+  
+      this.props.loginUser(newUser);
     }
 
     const errorFacebook = (response) => {
-      console.log('Failed to login with google error : ' + response);
+      console.log('Failed to login with facebook error : ' + response);
     }
 
     return (
@@ -91,7 +100,7 @@ class Login extends Component {
                         width="60px"
                         className="sticky-logo img-fluid"
                       />
-                      <h3>&nbsp;Welcome</h3>
+                      <h3>&nbsp;Welcome</h3> <h3 style={{color : 'orange', textTransform: 'capitalize' }}>&nbsp;{ this.props.match.params.role }</h3>
                     </div>
                     <h4 className="mb-3 f-w-400">Login into your account</h4>
 
@@ -147,6 +156,7 @@ class Login extends Component {
                       <FacebookLogin
                         appId="3080894288827797"
                         autoLoad={false}
+                        fields="email"
                         callback={responseFacebook}
                         onFailure={errorFacebook}
                         render={renderProps => (

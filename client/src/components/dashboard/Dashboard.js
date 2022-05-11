@@ -35,7 +35,7 @@ class Dashboard extends Component {
                 Welcome{" "}
                 <Link
                   to={`/profile/${profile.handle}`}
-                  style={{ color: "#F0542D", textDecoration: "underline" }}
+                  style={{ color: "#F39E18", textDecoration: "underline" }}
                 >
                   {profile.handle}
                 </Link>
@@ -48,7 +48,7 @@ class Dashboard extends Component {
             <div style={{ marginBottom: "60px" }} />
             <button
               onClick={this.onDeleteClick.bind(this)}
-              className="btn btn-danger"
+              className="btn btn-dark"
             >
               Delete My Account
             </button>
@@ -60,7 +60,7 @@ class Dashboard extends Component {
           <div>
             <p className="lead text-muted">Welcome {profile.handle}</p>
             <p>You have not yet setup a profile, please add some info</p>
-            <Link to="/create-profile" className="btn btn-lg btn-info">
+            <Link to="/create-profile" className="btn btn-lg btn-info" style = {{backgroundColor: '#1273B5'}}>
               Create Profile
             </Link>
           </div>

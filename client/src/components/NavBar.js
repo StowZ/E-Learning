@@ -98,12 +98,12 @@ class NavBar extends Component {
                                   className="nav-link"
                                 >
                                   <img
-                                    src="https://cdn2.iconfinder.com/data/icons/ios-7-icons/50/user_male4-512.png"
-                                    height="10px"
-                                    width="10px"
+                                    src="https://cdn4.iconfinder.com/data/icons/glyphs/24/icons_user2-512.png"
+                                    
+                                    width="25px"
                                     alt={users.first_name}
                                     style={{
-                                      marginRight: "5px"
+                                      marginRight: "5px" ,  borderRadius: 25/ 2
                                     }}
                                     className="sticky-logo img-fluid"
                                   //  title="You must have a Gravatar connected to your emial to display the image"
@@ -154,9 +154,9 @@ class NavBar extends Component {
               className="nav-link"
             >
               <img
-                src="https://cdn1.iconfinder.com/data/icons/user-avatars-2/300/04-512.png"
+                src="https://cdn4.iconfinder.com/data/icons/glyphs/24/icons_user2-512.png"
                 alt={users.first_name}
-                style={{ width: "25px", marginRight: "5px" }}
+                style={{ width: "25px", marginRight: "5px",  borderRadius: 25/ 2 }}
               />{" "}
               LOGOUT
             </a>
@@ -206,9 +206,9 @@ class NavBar extends Component {
               className="nav-link"
             >
               <img
-                src="https://cdn1.iconfinder.com/data/icons/user-avatars-2/300/04-512.png"
+                src="https://cdn4.iconfinder.com/data/icons/glyphs/24/icons_user2-512.png"
                 alt={users.first_name}
-                style={{ width: "25px", marginRight: "5px" }}
+                style={{ width: "25px", marginRight: "5px", borderRadius: 25/ 2 }}
               //  title="You must have a Gravatar connected to your emial to display the image"
               />{" "}
               LOGOUT
