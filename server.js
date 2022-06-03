@@ -17,20 +17,18 @@ const profile = require('./routes/api/profile');
 
 const app = express();
 
-// Db Config
+
 const db = require("./config/keys").mongoURI;
 
-//Passport middileware
+
 passport.use(passport.initialize());
 
-//passport config will in
 require("./config/passport")(passport);
 app.use(fileUpload());
-//Body Parser
+
 app.use(bodyParser.urlencoded({ limit: '50mb', extended: true, parameterLimit:1000000}));
 app.use(bodyParser.json({limit: '50mb', extended: true}));
 
-//Connect to mongodb through mongoose
 mongoose
   .connect(db,  { useNewUrlParser: true })
   .then(() => console.log("MongoDB connected"))
@@ -38,7 +36,6 @@ mongoose
 
 app.get("/", (req, res) => res.send("Hello World"));
 
-//Use routes
 app.use(cors());
 app.options("*", cors()); 
 app.use(users);

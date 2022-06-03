@@ -22,24 +22,16 @@ router.post("/contact/add", (req, res) => {
           });
       });
 
-      router.get('/contacts', (req, res) => {
-        //var decoded = jwt.verify(req.headers['authorization'], process.env.SECRET_KEY)
-    
+      router.get('/contacts', (req, res) => {   
         contactmodel.find()
             .then(doc => {
-               // res.setHeader('Access-Control-Expose-Headers', 'Content-Range');
                 res.setHeader('Content-Range', 'users 0-5/5');
                 res.json(doc)
                 
             })
             .catch(err => {
                 res.status(500).json(err)
-            })
-            
-                
+            })                   
     })
-
-      
-
       module.exports = router
  

@@ -3,7 +3,6 @@ let express=require('express')
 let router= express.Router()
 
 router.post('/category/add', (req, res)=>{
-    //req.body
     if(!req.body){
         return res.status(400).send("request body is missing")
     }
@@ -22,10 +21,7 @@ router.post('/category/add', (req, res)=>{
     })
 })
 
-
 router.get('/category', (req, res) => {
-    //var decoded = jwt.verify(req.headers['authorization'], process.env.SECRET_KEY)
-
     catmodel.findOne({
         _id: req.query.id
     })
@@ -56,11 +52,8 @@ router.put('/category/', (req, res) => {
 })
 
 router.get('/categories', (req, res) => {
-    //var decoded = jwt.verify(req.headers['authorization'], process.env.SECRET_KEY)
-
     catmodel.find()
         .then(doc => {
-           // res.setHeader('Access-Control-Expose-Headers', 'Content-Range');
             res.setHeader('Content-Range', 'users 0-5/5');
             res.json(doc)
             
@@ -72,9 +65,7 @@ router.get('/categories', (req, res) => {
             
 })
 
-router.delete("/category", (req, res) => {
-    //var decoded = jwt.verify(req.headers['authorization'], process.env.SECRET_KEY)
-  
+router.delete("/category", (req, res) => { 
     catmodel
       .findOneAndRemove({
         _id: req.query.id

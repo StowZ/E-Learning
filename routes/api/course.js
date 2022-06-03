@@ -38,8 +38,6 @@ router.post("/course/add", (req, res) => {
 });
 
 router.get("/courses", (req, res, next) => {
-  //var decoded = jwt.verify(req.headers['authorization'], process.env.SECRET_KEY)
-
   coursemodel
     .find()
     .populate({ path: "category", model: "category" })
@@ -56,8 +54,6 @@ router.get("/courses", (req, res, next) => {
 });
 
 router.get("/course", (req, res) => {
-  //var decoded = jwt.verify(req.headers['authorization'], process.env.SECRET_KEY)
-
   coursemodel
     .findOne({
       _id: req.query.id
@@ -71,10 +67,8 @@ router.get("/course", (req, res) => {
     });
 });
 
-//get courses by instructor id
-router.get("/coursebyinstructor", (req, res) => {
-  //var decoded = jwt.verify(req.headers['authorization'], process.env.SECRET_KEY)
 
+router.get("/coursebyinstructor", (req, res) => {
   coursemodel
     .find({
       instructor: req.query.id
@@ -90,8 +84,6 @@ router.get("/coursebyinstructor", (req, res) => {
 
 
 router.put("/course/", (req, res) => {
-  //var decoded = jwt.verify(req.headers['authorization'], process.env.SECRET_KEY)
-
   coursemodel
     .findOneAndUpdate(
       {
@@ -111,8 +103,6 @@ router.put("/course/", (req, res) => {
 });
 
 router.delete("/course", (req, res) => {
-  //var decoded = jwt.verify(req.headers['authorization'], process.env.SECRET_KEY)
-
   coursemodel
     .findOneAndRemove({
       _id: req.query.id

@@ -5,9 +5,21 @@ import BrandLogoSlider from "../components/BrandLogoSlider";
 import Footer from "../components/Footer";
 import MobileMenu from "../components/MobileMenu";
 class Services extends Component {
-  state = {
-    data: []
-  };
+  constructor(props) {
+    super(props);
+
+    /** Setting the initial state of the component by assigned an object to this.state **/
+    this.state = {
+      data: [],
+      search: ""
+    };
+  }
+
+  //for searching event in page
+  updateSearch(event) {
+    this.setState({ search: event.target.value.substr(0, 20) });
+  }
+
   async componentDidMount() {
     //this.onTextSubmit("react tutorials");
 
@@ -23,8 +35,11 @@ class Services extends Component {
     });
   }
   render() {
-    let data = this.state.data;
-
+    let data = this.state.data.filter(course => {
+      return (
+        course.courseName.toString().toLowerCase().indexOf(this.state.search) !== -1 );
+    });
+    
     let Datalist = data.map((val, i) => {
       return (
         <div
@@ -94,6 +109,25 @@ class Services extends Component {
           </div>
         </div>
         {/*====================  End of breadcrumb area  ====================*/}
+
+        <div
+          style={{
+            padding: "20px",
+            display: "flex",
+            flexDirection: "row",
+            justifyContent: "space-between"
+          }}
+        >
+          <h1 style={{marginLeft:"-200px", textDecoration:"underline", color:"#1A78B8"}}>Courses</h1>
+          <input
+            type="text"
+            placeholder="Search..."
+            class="form-control input-sm"
+            style={{ width: "250px" }}
+            value={this.state.search}
+            onChange={this.updateSearch.bind(this)}
+          />
+        </div>
 
         {/*====================  service page content ====================*/}
         <div className="page-wrapper section-space--inner--120">

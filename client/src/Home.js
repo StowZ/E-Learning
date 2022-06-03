@@ -25,11 +25,11 @@ class Home extends Component {
         {/* Project Slider */}
         <ProjectSliderTwo />
 
-        {/* Service Tab */}
-        <ServiceTab />
+        {/* Service Tab (Not finished) */}
+        {/* <ServiceTab /> */}
 
-        {/* Testimonial Slider */}
-        <TestimonialSlider />
+        {/* Testimonial Slider (Not finished)*/}
+         {/*<TestimonialSlider /> */}
 
         {/* Team job */}
 
