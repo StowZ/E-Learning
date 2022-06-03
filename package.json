@@ -1,7 +1,7 @@
 {
-  "name": "e-learning",
+  "name": "Gomarket",
   "version": "1.0.0",
-  "description": "E learning Website",
+  "description": "Gomarket",
   "main": "server.js",
   "scripts": {
     "client-install": "npm install --prefix client",
@@ -10,7 +10,7 @@
     "client": "npm start --prefix client",
     "dev": "concurrently \"npm run server\" \"npm run client\" "
   },
-  "author": "Apurva Savaj",
+  "author": "Gomarket",
   "license": "",
   "dependencies": {
     "@emailjs/browser": "^3.6.2",
