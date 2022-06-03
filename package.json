@@ -1,9 +1,6 @@
 {
-<<<<<<< HEAD
-  "name": "e-learning",
-=======
   "name": "Gomarket",
->>>>>>> d634e9422653029c48f27d0520e63fbaad7e448d
+  "name": "Gomarket",
   "version": "1.0.0",
   "description": "Gomarket",
   "main": "server.js",
