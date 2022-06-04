@@ -4,6 +4,7 @@ import NavBar from "../components/NavBar";
 import BrandLogoSlider from "../components/BrandLogoSlider";
 import Footer from "../components/Footer";
 import MobileMenu from "../components/MobileMenu";
+import { ToastContainer, toast } from "react-toastify";
 class Services extends Component {
   constructor(props) {
     super(props);
@@ -37,6 +38,28 @@ class Services extends Component {
       data: response.data
     });
   }
+  
+
+  delete(id) {
+    console.log(id);
+    axios
+      .delete("http://localhost:5000/course?id=" + id)
+      .then(result => {
+        toast.success("Deleted successfully");
+      })
+      .catch(err => {
+        
+        toast.error(id);
+      });
+    setTimeout(
+      function() {
+        
+        window.location.reload();
+      }.bind(this),
+      1300
+    );
+  }
+
   render() {
     let data = this.state.data.filter(course => {
       return (
@@ -92,6 +115,9 @@ class Services extends Component {
                 {/* <p className="subtitle">{val.courseDescription}</p>
                         <a href={`${process.env.PUBLIC_URL}/${val.pageLink}`} className="see-more-link">SEE MORE</a> */}
               </div>
+              <a href={"/serviceupdate/" + `${val._id}`} class="button">
+              <button onClick={this.delete.bind(this, `${val._id}`)} class="btn btn-danger">Delete</button>
+              <button class="btn btn-success">Edit</button></a>
             </div>
           </div>
         </div>
@@ -159,7 +185,7 @@ class Services extends Component {
         </div>
 
         {/*====================  End of service page content  ====================*/}
-
+        <ToastContainer />
         {/* Brand logo */}
         <BrandLogoSlider background="grey-bg" />
 

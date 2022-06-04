@@ -44,27 +44,7 @@ class ServiceDetailsLeftSidebar extends Component{
 
                                 <div className="content section-space--top--30">
                                 <div className="row">
-                                    <div className="col-12">
-                                    <h2>Construction</h2>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione, sunt perspiciatis error id ipsa atque unde quis dolore nobis eum aperiam enim blanditiis pariatur inventore eius commodi consectetur ut. Totam, assumenda! Laboriosam possimus, corporis dicta!</p>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores aliquid quod, officiis unde nostrum itaque! Adipisci dolorum, ab dolor, exercitationem praesentium dolorem quo voluptatum itaque dignissimos, sit esse cupiditate. Doloremque rerum similique a nobis placeat in illum, quo quaerat, ut repellat, fuga itaque? Nihil mollitia nisi, nam, accusantium nemo consequuntur reiciendis autem dicta consequatur earum beatae dolor distinctio, debitis repudiandae?</p>
-                                    </div>
-                                    <div className="col-lg-6 col-12 section-space--top--30">
-                                    <h3>Project Analysis</h3>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat, animi? Vel quas in minima qui totam, aliquid dolores quaerat voluptatum?</p>
-                                    </div>
-                                    <div className="col-lg-6 col-12 section-space--top--30">
-                                    <h3>Project Costing</h3>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat, animi? Vel quas in minima qui totam, aliquid dolores quaerat voluptatum?</p>
-                                    </div>
-                                    <div className="col-lg-6 col-12 section-space--top--30">
-                                    <h3>Project Planning</h3>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat, animi? Vel quas in minima qui totam, aliquid dolores quaerat voluptatum?</p>
-                                    </div>
-                                    <div className="col-lg-6 col-12 section-space--top--30">
-                                    <h3>Project Strategy</h3>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat, animi? Vel quas in minima qui totam, aliquid dolores quaerat voluptatum?</p>
-                                    </div>
+                                    
                                 </div>
                                 </div>
                             </div>

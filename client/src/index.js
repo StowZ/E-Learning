@@ -26,6 +26,7 @@ import Services from "./service/Services";
 import ServicesForInstructor from "./service/ServicesByInstructor";
 import Servicesforstudent from "./service/ServiceforStudent"
 import ServiceDetailsLeftSidebar from "./service/ServiceDetailsLeftSidebar";
+import ServiceUpdate from "./service/Serviceupdate";
 import Projects from "./project/Projects";
 import ProjectDetails from "./project/ProjectDetails";
 import BlogLeftSidebar from "./blog/BlogLeftSidebar";
@@ -116,6 +117,11 @@ class Root extends Component {
               exact
               path={`${process.env.PUBLIC_URL}/service-details-left-sidebar`}
               component={ServiceDetailsLeftSidebar}
+            />
+            <PrivateRoute
+              exact
+              path={`${process.env.PUBLIC_URL}/serviceupdate/:id`}
+              component={ServiceUpdate}
             />
             <PrivateRoute
               exact
